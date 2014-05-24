@@ -1,0 +1,1 @@
+{ echo; printf "Physical memory available: %d bytes.\n" `sysctl -n hw.physmem` ; echo; vmstat -s | grep -w -e active -e inactive -e 'in VM cache' -e 'wired down' -e free -e 'bytes per page' ; echo; echo "Swap: ";swapinfo ; echo; echo "tl;dr"; top -d 1 | grep -e Mem -e Swap ; echo; }
